@@ -16,15 +16,15 @@ def inputPlayerLetter():
     # Разрешение игроку ввести букву, которую он выбирает.
     # Возвращает список, в котором буква игрока — первый элемент, а буква компьютера — второй.
     letter = ''
-    while not (letter == 'Х' or letter == 'О'):
+    while not (letter == 'x' or letter == 'o'):
         print('Вы выбираете Х или О?')
         letter = input().upper()
 
     # Первым элементом списка является буква игрока, вторым — буква компьютера.
-    if letter == 'Х':
-        return ['Х', 'О']
+    if letter == 'x':
+        return ['x', 'o']
     else:
-        return ['О', 'Х']
+        return ['o', 'x']
 
 def whoGoesFirst():
     # Случайный выбор игрока, который ходит первым.
@@ -82,10 +82,10 @@ def chooseRandomMoveFromList(board, movesList):
 
 def getComputerMove(board, computerLetter):
 # Учитывая заполнение игрового поля и букву компьютера, определяет допустимый ход и возвращает его.
-    if computerLetter == 'Х':
-        playerLetter = 'О'
+    if computerLetter == 'x':
+        playerLetter = 'o'
     else:
-        playerLetter = 'Х'
+        playerLetter = 'x'
 
     # Это алгоритм для ИИ "Крестиков-Ноликов":
     # Сначала проверяем — победим ли мы, сделав следующий ход.
